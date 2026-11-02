@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-line {
+  display: none;
+  border: none;
+  outline: none;
+  height: 2px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #2563eb;
+}
+
+.nav-item.active .nav-line {
+  display: block;
+}
