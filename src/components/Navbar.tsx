@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
-  { to: "/companion/specialty", label: "All Companions" },
+  { to: "/companions/:location", label: "All Companions" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -15,7 +15,12 @@ const Navbar = () => {
   const [token, setToken] = useState(true);
   return (
     <div className="flex items-center justify-between border-b border-b-gray-400 py-4 mb-5 text-sm">
-      <img className="w-44 cursor-pointer" src={assets.logo} alt="Logo" />
+      <img
+        onClick={() => navigate("/")}
+        className="w-44 cursor-pointer"
+        src={assets.logo}
+        alt="Logo"
+      />
 
       <ul className="hidden items-start gap-5 font-medium md:flex">
         {navItems.map(({ to, label, end }) => (

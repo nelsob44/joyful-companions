@@ -4,10 +4,11 @@ import MyProfile from "./pages/MyProfile";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Companion from "./pages/Companion";
+import Companions from "./pages/Companions";
 import Login from "./pages/Login";
 import Appointment from "./pages/Appointment";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,10 +20,11 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
-        <Route path="/companion/:speciality" element={<Companion />} />
+        <Route path="/companions/:speciality" element={<Companions />} />
         <Route path="/login" element={<Login />} />
         <Route path="/appointment/:companionId" element={<Appointment />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
